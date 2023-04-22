@@ -6,6 +6,7 @@
 }
 
 .conteudo {
+    background-color: #cdb4db;
     padding: 15% 0%;
     font-family: 'Krona One';
     text-align: center;
@@ -15,13 +16,15 @@ input {
     padding: 10px;
     border: 2px solid #000000;
     border-radius: 5px;
-    width: 150px;
+    width: 230px;
+    margin-bottom: 8px;
 }
 
 button {
     padding: 10px;
-    width: 170px;
+    width: 250px;
     font-family: 'Krona One';
+    font-size: 16px;
     color: #240046;
     border: 2px solid #240046;
 }
