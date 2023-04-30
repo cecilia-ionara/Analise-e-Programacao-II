@@ -1,57 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mulish:wght@800&family=Roboto+Slab&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    ---cor-primaria: #F35B04;
-    ---cor-secundaria: #F18701;
-    ---cor-terciaria: #F7B801;
-    ---cor-quartenaria: #7678ED;
+:root {
+    ---cor-primaria: #7678ED;
     ---fonte: 'Krona One';
 }
 
-body{    
-    background-color: var(---cor-quartenaria);
+body {
+    background-color: var(---cor-primaria);
 }
 
-.conteudo{
+.conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10% 0%;
+    padding: 1% 0%;
 }
 
-.conteudo-imagens-imagem{
-    width: 200px;
+.conteudo-imagens-imagem {
+    width: 11rem;
 }
 
-.conteudo-calculadora{
+.conteudo-calculadora {
     font-family: var(---fonte);
 }
 
-.conteudo-calculadora-form-titulo{
-    font-size: 24px;
+.conteudo-calculadora-form-titulo {
+    font-size: 1.3rem;
 }
 
-.conteudo-calculadora-form{
-    font-size: 16px;
+.conteudo-calculadora-form {
+    font-size: 1rem;
+    padding: 1%;
 }
 
-input{
+.conteudo-calculadora-resultado {
+    margin-top: 0.5rem;
+}
+
+input {
     width: 80px;
 }
 
-button{
+.button-calcular {
+    position: relative;
+    display: inline-block;
+    padding: 0.4rem;
+    font-size: 1rem;
     font-family: var(---fonte);
-    font-size: 16px;
-    padding: 6px;
-    width: 300px;
+    color: #ffffff;
+    background-color: #1d3557;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    width: 18.75rem;
+    height: 3rem;
+    border: none;
+    box-shadow: 3px 4px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
 }
 
-.mensagem-magreza{
-    color: red;
+.button-calcular:hover {
+    background-color: #023e8a;
 }
