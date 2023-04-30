@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+    <main class="conteudo">
+        <section class="conteudo-imagens">
+            <img class="conteudo-imagens-imagem" src="images/icone-balanca.png">
+        </section>
+
+        <section class="conteudo-calculadora">
+
+            <form class="conteudo-calculadora-form" id="formulario">
+
+                <h1 id="conteudo-calculadora-form-titulo">
+                    Calculadora de IMC
+                </h1>
+
+                <div class="conteudo-calculadora-form">
+                    <label for="sexo">
+                        Sexo:
+                    </label>
+                    <select id="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+
+                <div class="conteudo-calculadora-form">
+                    <label for="peso">
+                        Peso:
+                    </label>
+                    <input id="peso" type="number" step="0.010" required>
+                    <span>
+                        kg
+                    </span>
+                </div>
+
+                <div class="conteudo-calculadora-form">
+                    <label for="altura">
+                        Altura:
+                    </label>
+                    <input id="altura" type="number" step="0.010" required>
+                    <span>
+                        m
+                    </span>
+                </div>
+
+                <button id="btncalcular">
+                    Calcular
+                </button>
+
+                <div class="conteudo-calculadora-resultado" id="resultado"></div>
+                <div class="conteudo-calculadora-imagem-resultado" id="imagemresultado"></div>
+            </form>
+            <script src="script.js"></script>
+        </section>
+    </main>
+</body>
+
+</html>
