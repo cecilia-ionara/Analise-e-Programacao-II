@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="valor">Valor</label>
+            <input type="text" id="valor">
+        </div>
+    </form>
+
+    <div>
+        <label for="xMin"> X mínimo</label>
+        <input type="text" id="xMin">
+    </div>
+    <div>
+        <label for="xMax"> X máximo</label>
+        <input type="text" id="xMax">
+    </div>
+    <div>
+        <button id="calcular">
+            Calcular
+        </button>
+    </div>
+    <div>
+        Resultado é <span id="resultado"></span>
+    </div>
+
+    <div>
+        <canvas id="myChart">
+        </canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
