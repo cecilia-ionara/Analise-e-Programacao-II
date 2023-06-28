@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+</head>
+<!--Crie um aplicativo em Python que recebe um valor em metros e
+milímetros e converte esses valor para: centímetro, decímetro, metro.
+• Mostre uma mensagem para cada uma dessas medidas.-->
+
+<body>
+    <p id="msg"></p>
+
+    <script>
+        let num1 = parseFloat(window.prompt('Digite uma distância em metros (m):'))
+        let num2 = parseFloat(window.prompt('Digite uma distância em milímetros (mm):'))
+
+        let cent1 = num1 * 10
+        let deci1 = num1 * 100
+        let m1 = num1 * 1000
+
+        let cent2 = num2 / 100
+        let deci2 = num2 / 10
+
+        msg.innerHTML = (`${num1}mm equivale a ${cent1} centimetros<br>`)
+        msg.innerHTML += (`${num1}mm equivale a ${deci1} decimetros<br>`)
+        msg.innerHTML += (`${num1}mm equivale a ${m1} metros<br><br>`)
+
+        msg.innerHTML += (`${num2}m equivale a ${cent2} centimetros<br>`)
+        msg.innerHTML += (`${num2}m equivale a ${deci2} decimetros<br>`)
+        msg.innerHTML += (`${num2}m equivale a ${num2}m<br>`)
+    </script>
+</body>
+
+</html>
