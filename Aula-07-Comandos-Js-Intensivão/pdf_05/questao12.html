@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 12</title>
+</head>
+
+<body>
+    <h1>Questão 12</h1>
+    <!--•• Entre com os valores a, b e c
+• Calcule o valor de delta para equação do 2º grau
+• Verifique se o delta é maior que 0 (zero) -->
+    
+    <script>
+        let a = parseFloat(prompt("Qual o valor de A?"))
+        let b = parseFloat(prompt("Qual o valor de B?"))
+        let c = parseFloat(prompt("Qual o valor de C?"))
+        let delta = b**2 - 4*a*c
+
+        if (delta > 0) {
+            document.write("Delta é maior que zero")
+        } else {
+            document.write("Delta NÃO é maior que zero")
+        }
+
+    </script>
+
+</body>
+
+</html>

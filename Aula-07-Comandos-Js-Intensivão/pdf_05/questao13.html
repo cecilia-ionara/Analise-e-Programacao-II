@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 12</title>
+</head>
+
+<body>
+    <h1>Questão 12</h1>
+    <!--•• O usuário deve informar o peso e a altura. O IMC deve ser calculado e
+o resultado deve ser comparado por operadores relacionais conforme
+a tabela abaixo: -->
+
+    <script>
+        let peso = parseFloat(prompt("Qual seu peso(kg)?"))
+        let altura = parseFloat(prompt("Qual sua altura(m)?"))
+        let situacao 
+
+        let imc = peso / (altura * altura)
+
+        if (imc < 18.5) {
+            situacao = "Magreza"
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            situacao = "Normal"
+        } else if (imc >= 25 && imc <= 29.9) {
+            situacao = "Sobrepeso"
+        } else if (imc >= 30 && imc <= 35) {
+            situacao = "Obesidade"
+        } else if (imc > 35) {
+            situacao = "Obesidade extrema"
+        }
+        document.write(`Sua situação é ${situacao}`)
+    </script>
+
+</body>
+
+</html>
