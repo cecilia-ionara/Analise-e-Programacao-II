@@ -16,15 +16,12 @@ duas condições forem verdadeiras para outras alternativas mostre
 “Não pode votar”. -->
 
     <script>
-        let pok1 = Number(window.prompt('Qual o poder de ataque do pokemon 1? '))
-        let pok2 = Number(window.prompt('Qual o poder de defesa do pokemon 2? '))
-        if (pok1 > pok2) {
-            document.write("O poder de ataque do pokemon 1 é maior que o poder de defesa do pokemon 2!")
-        } else if (pok2 > pok1) {
-            document.write("O poder de defesa do pokemon 2 é maior que o poder de ataque do pokemon 1!")
-        }
-        else {
-            document.write("Empate! Ambos possuem o mesmo poder de ataque e defesa!")
+        let idade = Number(window.prompt('Qual a sua idade? '))
+        let titulo = Boolean(window.prompt('Possui título de eleitor(true ou false)? '))
+        if (idade >= 16 && titulo == true) {
+            document.write("Pode votar!")
+        } else {
+            document.write("Não pode votar!")
         }
 
     </script>

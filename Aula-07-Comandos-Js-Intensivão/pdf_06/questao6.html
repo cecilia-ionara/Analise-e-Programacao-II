@@ -10,16 +10,18 @@
 
 <body>
     <h1>Questão 6</h1>
-    <!--•• Receba o valor de um usuário. Armazene na variável chamada senha.
-Verifique se a senha é igual a admin através de um operador
-relacional -->
-    
+    <!--•• Avaliando notas -->
+
     <script>
-        let senha = String(window.prompt('Insira a sua senha: '))
-        if (senha == "admin") {
-            document.write("A senha é igual a admin")
+        let nota = Number(window.prompt('Qual sua nota: '))
+        if (nota < 5) {
+            document.write("Ruim")
+        } else if (nota >= 5 && nota < 7) {
+            document.write("Regular")
+        } else if (nota >= 7 && nota <= 9) {
+            document.write("Bom")
         } else {
-            document.write("A senha NÃO é igual a admin")
+            document.write("Excelente")
         }
 
     </script>

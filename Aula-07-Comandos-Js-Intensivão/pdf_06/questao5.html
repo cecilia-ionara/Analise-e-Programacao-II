@@ -10,20 +10,18 @@
 
 <body>
     <h1>Questão 5</h1>
-    <!--•Receba um valor de um usuário que pode ser ativo ou inativo e
-verifique através de um operador relacional se o status é diferente de
-inativo -->
+    <!--•Faça um programa que verifique se é maior de 18 anos e se é amigo 
+do dono de uma festa. A pessoa pode entrar na festa se pelo menos 
+um desses quesitos seja verdadeiro. -->
 
     <script>
-        let valor = String(window.prompt('O usuário está inativo ou ativo? '))
-        if (valor == "ativo") {
-            document.write("A situação do usuário é diferente de inativo")
-        } else if (valor == "inativo") {
-            document.write("Usuário inativo")
+        let idade = Number(window.prompt('Qual sua idade? '))
+        let amiga = Boolean(window.prompt('É amiga do dono da festa? '))
+        if (idade >= 18 || amiga == true) {
+            document.write("Pode entrar na festa!")
         } else {
-            document.write("Favor digitar a palavra corretamente (ativo ou inativo)")
+            document.write("NÃO pode entrar na festa")
         }
-
 
     </script>
 
