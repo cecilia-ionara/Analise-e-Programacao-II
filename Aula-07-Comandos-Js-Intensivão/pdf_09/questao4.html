@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+
+<body>
+    <h1>Questão 4</h1>
+    <!--• Faça um programa que calcule e mostre a área de um trapézio-->
+
+    <script>
+        let base = parseFloat(window.prompt("Qual a base?"))
+        let altura = parseFloat(window.prompt("Qual a altura?"))
+        let base_maior = parseFloat(window.prompt("Qual a base maior?"))
+        let base_menor = parseFloat(window.prompt("Qual a base menor?"))
+
+        let area = ((base_maior + base_menor) * altura)/2
+
+        window.alert(`A área é ${area}`)
+    </script>
+</body>
+
+</html>

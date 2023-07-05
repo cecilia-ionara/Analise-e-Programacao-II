@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+</head>
+
+<body>
+    <!--Escreva um aplicativo que lê o valor pago e o valor do desconto (%) e
+calcula o valor com desconto.-->
+    <script>
+        let pago = parseFloat(prompt("Qual o valor pago?"))
+        let desconto = parseFloat(prompt("Qual o valor do desconto(%)?"))
+        let valor_desc = pago - ((pago * desconto)/100) 
+            window.alert(`O valor descontado é ${valor_desc} reais`)
+    </script>
+</body>
+
+</html>

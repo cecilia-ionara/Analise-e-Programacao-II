@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+</head>
+
+<body>
+    <h1>Questão 10</h1>
+    <!--•Receba do usuário o ano de nascimento, se é solteiro. Através de um
+operador relacional verifique se é solteiro e maior de 18 anos. -->
+
+    <script>
+        let ano = Number(window.prompt('Qual seu ano de nascimento? '))
+        let civil = String(window.prompt('É solteiro? (true ou false) '))
+
+        let idade = 2023 - ano
+
+        if (idade >= 18 && civil == "true") {
+            document.write("O usuário é solteiro e maior de 18 anos")
+        } else {
+            document.write("Infelizmente o usuário não se encaixa na condição")
+        }
+
+    </script>
+
+</body>
+
+</html>

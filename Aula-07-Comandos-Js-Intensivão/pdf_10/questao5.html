@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+
+<body>
+    <h1>Questão 5</h1>
+    <!-- Crie um programa em JS que contenha um array de notas de alunos. 
+• Este array recebe de um prompt as notas de 10 alunos que podem 
+variar de 0 a 10 -->
+
+    <script>
+        let notas = []
+        for (let i = 1; i < 11; i++) {
+            let nota = parseFloat(window.prompt(`Insira a nota ${i}: `))
+            notas.push(nota)
+        }
+        window.alert(`Suas notas foram: ${notas}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+
+<body>
+    <h1>Questão 2</h1>
+    <!-- Cara ou coroa
+• Crie um programa em que você digite se você quer escolher cara, 
+coroa ou sair.
+• Se escolher cara ou coroa um número aleatório é sorteado 
+representando o comportamento da moeda sendo lançada.
+• Mostre o valor que deu e escreva se a pessoa ganhou ou não.
+• Depois pergunte novamente se o usuário deseja escolher cara, coroa 
+ou sair -->
+
+    <script>
+        let resposta = String(window.prompt("O que deseja?(cara, coroa ou sair)"))
+        if (reposta == "cara" || reposta == "coroa") {
+            //SORTEAR NÚMERO ALEATORIO document.write()
+
+        } else if (respota == "sair") {
+            //exit
+        } else {
+            window.alert("Favor digitar corretamente")
+        }
+
+        if (resposta == "cara" && numero % 2 == 0) {
+            document.write("Você escolheu par e ganhou!!")
+        } else if (reposta == "coroa" && numero % 2 != 0) {
+            document.write("Você escolheu coroa e ganhou!!")
+        } else {
+            document.write("Você perdeu! Tente novamente")
+        }
+
+        resposta = String(window.prompt("O que deseja?(cara, coroa ou sair)"))
+
+
+    </script>
+</body>
+
+</html>

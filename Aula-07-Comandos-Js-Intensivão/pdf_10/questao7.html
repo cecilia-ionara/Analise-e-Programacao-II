@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 7</title>
+</head>
+
+<body>
+    <h1>Questão 7</h1>
+    <!--• Com base no exercício 2, crie um array que onde são colocadas as 
+notas de alunos reprovados(menor que 7) e outra onde são colocados 
+os aprovados(maior ou igual a 7) -->
+
+    <script>
+        let aprovados = []
+        let reprovados = []
+        for (let i = 1; i < 11; i++) {
+            let nota = parseFloat(window.prompt(`Insira a nota ${i}: `))
+            if (nota < 7){
+                reprovados.push(nota)
+            } else if (nota >= 7 && nota <= 10) {
+                aprovados.push(nota)
+            } else {
+                window.alert("Favor inserir um número entre 1 e 10")
+            }
+        }
+        window.alert(`As notas aprovadas: ${aprovados}`)
+        window.alert(`As notas reprovadas: ${reprovados}`)
+
+    </script>
+</body>
+
+</html>
