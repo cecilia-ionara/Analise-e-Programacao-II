@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+}
+
+.cabecalho {
+    background-color: #240046;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+}
+
+.cabecalho-imagem {
+    height: 72px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item {
+    font-family: 'Roboto Slab', serif;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.conteudo {
+    background-color: #3c096c;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-mensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.conteudo-principal-mensagem-titulo {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 44px;
+    color: #ffffff;
+}
+
+.conteudo-principal-mensagem-subtitulo {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.conteudo-principal-mensagem-botao {
+    position: relative;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    width: 180px;
+    height: 60px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.conteudo-principal-mensagem-botao:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-out;
+}
+
+.conteudo-principal-mensagem-botao:hover:before {
+    left: 0;
+}
+
+.conteudo-principal-mensagem-imagem {
+    height: 430px;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 48px;
+    padding: 30px;
+}
+
+.conteudo-secundario-titulo {
+    border-top: 0.4px solid #6A65FA;
+    padding-top: 48px;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+.rodape {
+    padding: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    background-color: #240046;
+}
+
+.rodape-imagem {
+    height: 40px;
+}
+
+* {
+    user-select: none;
+}
+
