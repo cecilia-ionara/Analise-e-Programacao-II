@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Moda</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MODA 3/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(UPE 2021)</strong> No verão de 2018, uma grande
+                loja de eletrodomésticos
+                registrou o número de
+                unidades de ventiladores vendidas durante 10 dias consecutivos, conforme a tabela abaixo. Com isso, foi
+                possível verificar qual o volume de vendas por dia e a variação do número de vendas de um dia para o dia
+                seguinte.</p>
+            <img src="tabela3.jpg" alt="tabela 2">
+            <p class="conteudo-paragrafo">Qual a moda das variações do número de vendas diárias no período considerado?</p>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a3" name="questao3" value="a">
+                <label for="a3">a) 53</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b3" name="questao3" value="b">
+                <label for="b3">b) 15</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c3" name="questao3" value="c">
+                <label for="c3">c) 7</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d3" name="questao3" value="d">
+                <label for="d3">d) 4</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e3" name="questao3" value="e">
+                <label for="e3">e) 2</label>
+            </div>
+
+            <button class="conteudo-botao" id="btn3">Responder</button>
+
+            <div>
+                <span id="gabarito3"></span>
+            </div>
+        </section>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/h8a99hxuiJU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo3"></iframe>
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Próxima</button>
+
+        <script>
+            btn3 = document.querySelector("#btn3");
+            addVideo3 = document.getElementById("addVideo3");
+            refresh = document.querySelector("#refresh");
+            respostaSubmetida = false;
+            btn3.style.visibility = "visible";
+            refresh.style.visibility = "hidden";
+            addVideo3.style.visibility = "hidden";
+
+            btn3.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao3");
+                let gabarito3 = document.getElementById("gabarito3");
+                btn3.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo3.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'd') {
+                            gabarito3.textContent = "Gabarito D. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito3.textContent = "Gabarito D. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+
+                        }
+                        break;
+                    }
+                }
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q4_moda.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>

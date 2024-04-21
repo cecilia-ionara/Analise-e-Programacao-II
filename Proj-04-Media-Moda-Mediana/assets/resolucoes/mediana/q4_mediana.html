@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Mediana</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MEDIANA 4/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(ENEM 2017 2ª APLICAÇÃO)</strong> Um dos
+                principais indicadores de
+                inflação é o Índice Nacional
+                de Preços ao Consumidor Amplo (IPCA).</p>
+            <img src="tabela4mediana.png" class="conteudo-imagem" alt="" width="500" height="300">
+            <p class="conteudo-paragrafo">O gráfico apresenta os valores do IPCA nos anos de 1994 e 2011. O valor mais
+                próximo da mediana de todos
+                os valores da inflação indicados no gráfico é </p>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a4" name="questao4" value="a">
+                <label for="a4">a) 5,97 </label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b4" name="questao4" value="b">
+                <label for="b4">b) 6,24</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c4" name="questao4" value="c">
+                <label for="c4">c) 6,50 </label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d4" name="questao4" value="d">
+                <label for="d4">d) 8,07</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e4" name="questao4" value="e">
+                <label for="e4">e) 10,10</label>
+            </div>
+
+            <div>
+                <button class="conteudo-botao" id="btn4">Responder</button>
+            </div>
+
+            <div>
+                <span id="gabarito4"></span>
+            </div>
+        </section>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MnDAHAbVQ8U"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo4"></iframe>
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Próxima</button>
+
+        <script>
+            btn4 = document.querySelector("#btn4");
+            addVideo4 = document.getElementById("addVideo4");
+            refresh = document.getElementById("refresh");
+            respostaSubmetida = false;
+            btn4.style.visibility = "visible";
+            refresh.style.visibility = "hidden";
+            addVideo4.style.visibility = "hidden";
+
+            btn4.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao4");
+                let gabarito4 = document.getElementById("gabarito4");
+                btn4.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo4.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'b') {
+                            gabarito4.textContent = "Gabarito B. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito4.textContent = "Gabarito B. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+
+                        }
+
+                        break;
+                    }
+                }
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q5_mediana.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>

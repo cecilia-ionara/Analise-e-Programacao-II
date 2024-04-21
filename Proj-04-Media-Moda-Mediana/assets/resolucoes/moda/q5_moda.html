@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Moda</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MODA 5/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(UPE 2021)</strong> Era uma vez, em uma
+                elegante cidade chamada Estilo, uma boutique famosa por
+                suas roupas exclusivas. A loja decidiu lançar uma nova linha de vestidos de festa e realizou uma
+                pesquisa para determinar o comprimento mais popular entre as clientes. Os resultados foram os seguintes:
+            </p>
+            <p class="conteudo-paragrafo">150 cm, 140 cm, 155 cm, 145 cm, 155 cm, 140 cm, 150 cm, 140 cm, 145 cm, 160 cm
+            </p>
+            <p class="conteudo-paragrafo">Qual é o comprimento mais popular entre os vestidos de festa nessa cidade?</p>
+
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a5" name="questao5" value="a">
+                <label for="a5">a) 140 cm</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b5" name="questao5" value="b">
+                <label for="b5">b) 145 cm
+                </label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c5" name="questao5" value="c">
+                <label for="c5">c) 150 cm</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d5" name="questao5" value="d">
+                <label for="d5">d) 155 cm</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e5" name="questao5" value="e">
+                <label for="e5">e) 160 cm</label>
+            </div>
+
+            <button class="conteudo-botao" id="btn5">Responder</button>
+
+            <div>
+                <span id="gabarito5"></span>
+            </div>
+        </section>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/h8a99hxuiJU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo3"></iframe>
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Refazer</button>
+
+        <script>
+            btn5 = document.querySelector("#btn5");
+            addVideo5 = document.getElementById("addVideo5");
+            refresh = document.querySelector("#refresh");
+            respostaSubmetida = false;
+            btn5.style.visibility = "visible";
+            refresh.style.visibility = "hidden";
+            addVideo3.style.visibility = "hidden";
+
+            btn5.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao5");
+                let gabarito3 = document.getElementById("gabarito5");
+                btn5.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo5.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'b') {
+                            gabarito5.textContent = "Gabarito B. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+                        } else {
+                            gabarito5.textContent = "Gabarito B. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+                        }
+
+                        break;
+                    }
+                }
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q1_moda.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>

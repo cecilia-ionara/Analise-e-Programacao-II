@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Mediana</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MEDIANA 1/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(ENEM 2019 2° APLICAÇÃO)</strong> O quadro
+                apresenta a relação dos jogadores que fizeram parte da
+                seleção brasileira de voleibol masculino nas Olimpíadas de 2012, em Londres, e suas respectivas alturas,
+                em metro</p>
+            <img src="tabela1mediana.png" class="conteudo-imagem" alt="" width="350" height="400">
+            <p class="conteudo-paragrafo">A mediana das alturas, em metro, desses jogadores é: </p>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a1" name="questao1" value="a">
+                <label for="a1">a) 1,90</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b1" name="questao1" value="b">
+                <label for="b1">b) 1,91</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c1" name="questao1" value="c">
+                <label for="c1">c) 1,96</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d1" name="questao1" value="d">
+                <label for="d1">d) 1,97</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e1" name="questao1" value="e">
+                <label for="e1">e) 1,98</label>
+            </div>
+            
+            <button class="conteudo-botao" id="btn1">Responder</button>
+
+            <div>
+                <span id="gabarito1"></span>
+            </div>
+        </section>
+
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/if-YXS3NClM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo"></iframe>
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Próxima</button>
+
+        <script>
+            btn1 = document.querySelector("#btn1");
+            addVideo = document.getElementById("addVideo");
+            refresh = document.getElementById("refresh");
+            respostaSubmetida = false;
+            btn1.style.visibility = "visible";
+            refresh.style.visibility = "hidden";
+            addVideo.style.visibility = "hidden";
+
+            btn1.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+
+                let radios = document.getElementsByName("questao1");
+                let gabarito1 = document.getElementById("gabarito1");
+                btn1.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'c') {
+                            gabarito1.textContent = "Gabarito c. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito1.textContent = "Gabarito C. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+
+                        }
+
+                        break;
+                    }
+                }
+
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q2_mediana.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>

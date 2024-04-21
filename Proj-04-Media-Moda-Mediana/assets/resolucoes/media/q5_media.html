@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Média</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MÉDIA 5/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(ENEM 2014 2ª APLICAÇÃO)</strong> A tabela
+                apresenta uma estimativa da evolução da população
+                brasileira por faixa etária, em milhões de pessoas, para 2020, 2030 e 2045. </p>
+            <img src="tabela5media.png" alt="">
+            <p class="conteudo-paragrafo">Com base na tabela, o valor que mais se aproxima da média dos percentuais da
+                população brasileira na
+                faixa etária até 14 anos, nos anos de 2020, 2030 e 2045, é </p>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a5" name="questao5" value="a">
+                <label for="a5">a) 21,7</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b5" name="questao5" value="b">
+                <label for="b5">b) 48,3</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c5" name="questao5" value="c">
+                <label for="c5">c) 48,5</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d5" name="questao5" value="d">
+                <label for="d5">d) 48,0</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e5" name="questao5" value="e">
+                <label for="e5">e) 21,5</label>
+            </div>
+
+            <button class="conteudo-botao" id="btn5">Responder</button>
+
+            <div>
+                <span id="gabarito5"></span>
+            </div>
+        </section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fZwT1HJrWfc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen id="addVideo5"></iframe>
+            <button class="conteudo-botao" id="refresh">Refazer</button>
+
+        <script>
+            btn5 = document.querySelector("#btn5");
+            addVideo5 = document.getElementById("addVideo5");
+            refresh = document.getElementById("refresh");
+            respostaSubmetida = false;
+            refresh.style.visibility = "hidden";
+            addVideo5.style.visibility = "hidden";
+
+            btn5.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao5");
+                let gabarito5 = document.getElementById("gabarito5");
+                btn5.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo5.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'a') {
+                            gabarito5.textContent = "Gabarito A. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito5.textContent = "Gabarito A. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+
+                        }
+                        break;
+                    }
+                }
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q1_media.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>
