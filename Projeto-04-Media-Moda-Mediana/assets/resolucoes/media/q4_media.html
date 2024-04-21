@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Média</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MÉDIA 4/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(ENEM 2014 2ª APLICAÇÃO)</strong> Após encerrar o período de vendas de 2012, uma concessionária
+                fez um levantamento das vendas de carros novos no último semestre desse ano. Os dados estão expressos no
+                gráfico:</p>
+            <img src="tabela4media.png" alt="">
+            <p class="conteudo-paragrafo">Ao fazer a apresentação dos dados aos funcionários, o gerente estipulou como meta para o mês de janeiro
+                de 2013 um volume de vendas 20% superior à média mensal de vendas do semestre anterior. Para atingir
+                essa meta, a quantidade mínima de carros que deveriam ser vendidos em janeiro</p>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a4" name="questao4" value="a">
+                <label for="a4">a) 20</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b4" name="questao4" value="b">
+                <label for="b4">b) 21</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c4" name="questao4" value="c">
+                <label for="c4">c) 17</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d4" name="questao4" value="d">
+                <label for="d4">d) 24</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e4" name="questao4" value="e">
+                <label for="e4">e) 30</label>
+            </div>
+
+            <button class="conteudo-botao" id="btn4">Responder</button>
+
+            <div>
+                <span id="gabarito4"></span>
+            </div>
+        </section>
+        
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TalEeHU3IJo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo4"></iframe>
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Próxima</button>
+
+        <script>
+            btn4 = document.querySelector("#btn4");
+            addVideo4 = document.getElementById("addVideo4");
+            refresh = document.getElementById("refresh");
+            respostaSubmetida = false;
+            refresh.style.visibility = "hidden";
+            addVideo4.style.visibility = "hidden";
+
+            btn4.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao4");
+                let gabarito4 = document.getElementById("gabarito4");
+                btn4.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo4.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'd') {
+                            gabarito4.textContent = "Gabarito D. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito4.textContent = "Gabarito D. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+
+                        }
+
+                        break;
+                    }
+                }
+
+            })
+
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q5_media.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>

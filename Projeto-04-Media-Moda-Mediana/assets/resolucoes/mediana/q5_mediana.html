@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Mediana</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MEDIANA 5/5</h1>
+            <p class="conteudo-paragrafo"><strong class="conteudo-titulo">(ENEM 2017 2ª APLICAÇÃO)</strong> Cinco
+                regiões de um país estão buscando recursos no Governo
+                Federal para diminuir a taxa de desemprego de sua população. Para decidir qual região receberia o
+                recurso, foram colhidas as taxas de desemprego,em porcentagem, dos últimos três anos. Os dados estão
+                apresentados na tabela. </p>
+            <img src="tabela5mediana.png" alt="">
+            <p class="conteudo-paragrafo"> Ficou decidido que a região contemplada com a maior parte do recurso seria
+                aquela com a maior mediana
+                das taxas de desemprego dos últimos três anos. A região que deve receber a maior parte do recurso é a:
+            </p>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a5" name="questao5" value="a">
+                <label for="a5">a) A </label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b5" name="questao5" value="b">
+                <label for="b5">b) B</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c5" name="questao5" value="c">
+                <label for="c5">c) C </label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d5" name="questao5" value="d">
+                <label for="d5">d) D</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e5" name="questao5" value="e">
+                <label for="e5">e) E</label>
+            </div>
+
+            <button class="conteudo-botao" id="btn5">Responder</button>
+
+            <div>
+                <span id="gabarito5"></span>
+            </div>
+        </section>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wQtA_Swp0ag"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo5"></iframe>
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Refazer</button>
+
+        <script>
+            btn5 = document.querySelector("#btn5");
+            addVideo5 = document.getElementById("addVideo5");
+            refresh = document.getElementById("refresh");
+            respostaSubmetida = false;
+            btn5.style.visibility = "visible";
+            refresh.style.visibility = "hidden";
+            addVideo5.style.visibility = "hidden";
+
+            btn5.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao5");
+                let gabarito4 = document.getElementById("gabarito5");
+                btn5.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo5.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'e') {
+                            gabarito5.textContent = "Gabarito E. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito5.textContent = "Gabarito E. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+                        }
+                        break;
+                    }
+                }
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q1_mediana.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>

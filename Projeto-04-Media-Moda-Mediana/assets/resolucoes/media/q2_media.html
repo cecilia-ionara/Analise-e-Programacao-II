@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questões de Média</title>
+    <link rel="stylesheet" href="../../estilos/resolucoes.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-nav">
+            <a class="cabecalho-nav-link" href="../../index.html">Home</a>
+            <a class="cabecalho-nav-link" href="../../quiz/quiz.html">Quiz</a>
+        </nav>
+    </header>
+    
+    <main class="conteudo">
+        <section class="conteudo-comando-total" name="questões">
+            <h1 class="conteudo-titulo">MÉDIA 2/5</h1>
+            <p class="conteudo-paragrafo"><strong>(ENEM 2016 3ª APLICAÇÃO)</strong> O presidente de um time de futebol
+                quer contratar um
+                atacante
+                para seu elenco e um empresário lhe ofereceu cinco jogadores. Ele deseja contratar o jogador que
+                obteve
+                a maior média de gols nos anos de 2010 a 2013. O quadro apresenta o número de gols marcados nos anos
+                de
+                2010 a 2013 por cada um dos cinco jogadores: I, II, III, IV e V. </p>
+            <img src="tabela2media.jpg" alt="">
+            <p class="conteudo-paragrafo">O presidente do time deve contratar o jogador </p>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="a2" name="questao2" value="a">
+                <label for="a2">a) I</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="b2" name="questao2" value="b">
+                <label for="b2">b) II</label><br>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="c2" name="questao2" value="c">
+                <label for="c2">c) III</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="d2" name="questao2" value="d">
+                <label for="d2">d) IV</label>
+            </div>
+            <div class="conteudo-comando-alternativa">
+                <input type="radio" id="e2" name="questao2" value="e">
+                <label for="e2">e) V</label>
+            </div>
+
+            <button class="conteudo-botao" id="btn2">Responder</button>
+
+            <div>
+                <span id="gabarito2"></span>
+            </div>
+        </section>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KA1D63sQ1v8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen id="addVideo2"></iframe>
+
+        </div>
+
+        <button class="conteudo-botao" id="refresh">Próxima</button>
+
+        <script>
+            btn2 = document.querySelector("#btn2");
+            addVideo2 = document.getElementById("addVideo2");
+            refresh = document.getElementById("refresh");
+            respostaSubmetida = false;
+            btn2.style.visibility = "visible";
+            refresh.style.visibility = "hidden";
+            addVideo2.style.visibility = "hidden";
+
+            btn2.addEventListener("click", function (event) {
+                event.preventDefault()
+                if (respostaSubmetida) {
+                    return;
+                }
+
+                let radios = document.getElementsByName("questao2");
+                let gabarito2 = document.getElementById("gabarito2");
+                btn2.style.visibility = "hidden";
+                refresh.style.visibility = "visible";
+                addVideo2.style.visibility = "visible";
+                respostaSubmetida = true;
+
+                for (let i = 0, length = radios.length; i < length; i++) {
+
+                    if (radios[i].checked) {
+                        if (radios[i].value == 'c') {
+                            gabarito2.textContent = "Gabarito C. Resposta certa"
+                            radios[i].parentElement.classList.add("correto")
+
+                        } else {
+                            gabarito2.textContent = "Gabarito C. Resposta errada"
+                            radios[i].parentElement.classList.add("errado")
+
+                        }
+
+                        break;
+                    }
+                }
+            })
+
+            refresh.addEventListener("click", function () {
+                window.location.href = "q3_media.html";
+            })
+
+        </script>
+    </main>
+</body>
+
+</html>
